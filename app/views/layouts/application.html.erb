@@ -13,6 +13,22 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar p-2">
+      <h1><%= link_to "Simple Airbnb", flats_path %></h1>
+
+      <div class="d-flex">
+        <form class="form-inline">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <button class="btn btn-outline-success">Search</button>
+          </div>
+        </form>
+        <div class="btn btn-outline-primary mx-3"><%= link_to "Add flat", new_flat_path %></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,0 +1,25 @@
+<h2>All our Flats</h2>
+<p>All
+  <%= Flat.count %>
+  flats.</p>
+
+<div class="container">
+  <div class="row g-2">
+    <% @flats.each do |flat| %>
+      <div class="col-4 card shadow-sm">
+        <div class="p-2">
+          <h3><%= flat.name %></h3>
+          <p><%= flat.address %></p>
+          <p>Pax:
+            <%= flat.number_of_guests %>
+            | £:
+            <%= flat.price_per_night %>
+          </p>
+          <p>
+            More info | Edit | Remove
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
